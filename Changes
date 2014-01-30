@@ -1,3 +1,8 @@
+0.03    2014-01-30
+
+    - Move the status message adjacent to the Update button
+    - Show a placeholder in the textarea when there's no comment for the user
+
 0.02    2014-01-30
 
     - Show an [edit] link next to the comments area for each requestor
