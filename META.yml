@@ -1,5 +1,5 @@
 ---
-abstract: 'RT QuickUpdateUserComments Extension'
+abstract: 'Adds a quick-update comments portlet for the user summary and the rights ModifyUserComments and SeeUserComments'
 author:
   - 'Thomas Sibley <trsibley@uw.edu>'
 build_requires:
@@ -16,6 +16,7 @@ meta-spec:
 name: RTx-QuickUpdateUserComments
 no_index:
   directory:
+    - html
     - inc
 resources:
   license: http://opensource.org/licenses/gpl-license.php

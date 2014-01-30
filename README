@@ -1,6 +1,6 @@
 NAME
-    RTx-QuickUpdateUserComments - [One line description of module's purpose
-    here]
+    RTx::QuickUpdateUserComments - Adds a quick-update comments portlet for
+    the user summary and the rights ModifyUserComments and SeeUserComments
 
 INSTALLATION
     "perl Makefile.PL"
@@ -9,12 +9,14 @@ INSTALLATION
         May need root permissions
 
     Edit your /opt/rt4/etc/RT_SiteConfig.pm
-        Add this line:
+        Add these lines:
 
-            Set(@Plugins, qw(RTx::QuickUpdateUserComments));
+            Plugin("RTx::QuickUpdateUserComments");
 
-        or add "RTx::QuickUpdateUserComments" to your existing @Plugins
-        line.
+            # Adds the comment edit box to the default user info portlets
+            Set( @UserSummaryPortlets, qw/ExtraInfo EditComments CreateTicket ActiveTickets InactiveTickets/ );
+
+            # Grant folks ModifyUserComments and/or SeeUserComments
 
     Clear your mason cache
             rm -rf /opt/rt4/var/mason_data/obj
