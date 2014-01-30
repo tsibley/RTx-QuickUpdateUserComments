@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package RTx::QuickUpdateUserComments;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 RT::System->AddRight( Staff => ModifyUserComments => 'Update the Comments field on any user' );
 RT::System->AddRight( Staff => SeeUserComments    => 'Read the Comments field on any user' );
