@@ -13,11 +13,11 @@ if (exists $DECODED_ARGS->{Comments}) {
 </%init>
 <&| /Widgets/TitleBox, title => loc('Comments'), class => "user comments" &>
 <form action="<% RT->Config->Get('WebPath') %>/User/Summary.html" method="POST">
-% if ($status) {
-  <div class="status"><% $status %></div>
-% }
   <textarea name="Comments" style="width: 50em; height: 5em"><% $User->Comments || '' %></textarea>
   <input type="hidden" name="id" value="<% $User->id %>">
   <input type="submit" class="button" value="<% loc('Update') %>" style="vertical-align: top">
+% if ($status) {
+  <span class="status" style="display: inline-block; vertical-align: top;"><% $status %></span>
+% }
 </form>
 </&>
